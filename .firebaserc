@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "todo-f372e": {
+      "hosting": {
+        "todo": [
+          "todo-f372e"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "todo-f372e"
+  }
+}

@@ -1,0 +1,7 @@
+<app-todo-item
+  *ngFor="let todo of todos"
+  [todo]="todo"
+  (deleteTodo)="deleteTodo($event)"
+  >{{ todo.title }}</app-todo-item
+>
+<app-add-todo></app-add-todo>

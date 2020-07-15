@@ -1,0 +1,21 @@
+<div class="form-check">
+  <input (change)="toggle(todo)" class="form-check-input" type="checkbox" />
+  <a (click)="edit(todo)">
+    <span [ngClass]="setClasses()" *ngIf="todo !== editTodo; else isEdit">{{
+      todo.title
+    }}</span>
+    <ng-template #isEdit>
+      <input
+        type="text"
+        [ngClass]="setClasses()"
+        class="form-check-label"
+        [(ngModel)]="todo.title"
+        (blur)="update()"
+        (keyup.enter)="update()"
+      />
+    </ng-template>
+  </a>
+  <button (click)="delete(todo)" type="button" class="close" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
