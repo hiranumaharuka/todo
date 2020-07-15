@@ -1,0 +1,10 @@
+<form (ngSubmit)="submit(createNgForm)" #createNgForm="ngForm">
+  <input
+    class="form-control"
+    type="text"
+    placeholder="Default input"
+    name="title"
+    [(ngModel)]="title"
+  />
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
